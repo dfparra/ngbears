@@ -18,7 +18,7 @@
 
     function createBear(){}
     function getAll(){
-      return $http.get('https://quiet-refuge-27140.herokuapp.com/todos')
+      return $http.get('https://shielded-retreat-49451.herokuapp.com/bears')
                   .then(function(response){
                     o.bears = response.data;
                     // console.log('BearService bears', bears);
