@@ -19,5 +19,9 @@
                   bears = BearService.bears;
                   console.log(bears);
                 });
+    BearService.create();
+    BearService.delete();
+    BearService.update();
+
   }
 })();
