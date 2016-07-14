@@ -7,12 +7,38 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <div ng-controller='MainController'>
-    <input type="text" ng-model='messages'>
-    {{message}}
-    {{messages}}
-    {{msg}}
+  <div class="container" ng-controller='MainController'>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="form-group">
+          <label>Size:</label>
+          <input type="text" class="form-control">
+        </div>
+      </div>
+
+      <div class="col-md-8 col-md-offset-2">
+        <div class="form-group">
+          <label>Color:</label>
+          <input type="text" class="form-control">
+        </div>
+      </div>
+
+      <div class="col-md-8 col-md-offset-2">
+        <button class="btn btn-warning btn-block">Create</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="jumbotron">
+        <button class="btn btn-sm btn-danger pull-right">X</button>
+        <p><strong>Size:</strong>bearSize</p>
+        <p><strong>Color:</strong>bearColor</p>
+      </div>
+    </div>
+
   </div>
+
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
   <script src="js/app.js"></script>
