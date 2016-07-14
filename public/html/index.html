@@ -12,27 +12,29 @@
       <div class="col-md-8 col-md-offset-2">
         <div class="form-group">
           <label>Size:</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" ng-model ='size'>
+          <label>Color:</label>
+          <input type="text" class="form-control" ng-model ='color'>
         </div>
       </div>
 
-      <div class="col-md-8 col-md-offset-2">
+      <!-- <div class="col-md-8 col-md-offset-2">
         <div class="form-group">
           <label>Color:</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" ng-model ='color'>
         </div>
-      </div>
+      </div> -->
 
       <div class="col-md-8 col-md-offset-2">
-        <button class="btn btn-warning btn-block">Create</button>
+        <button class="btn btn-warning btn-block" ng-click ='create(size,color)'>Create</button>
       </div>
     </div>
 
-    <div class="row">
-      <div class="jumbotron">
-        <button class="btn btn-sm btn-danger pull-right">X</button>
-        <p><strong>Size:</strong>bearSize</p>
-        <p><strong>Color:</strong>bearColor</p>
+    <div class="row" ng-repeat ='eachItem in bears'>
+      <div class="jumbotron" data-id ={{eachItem.id}}>
+        <button class="btn btn-sm btn-danger pull-right" ng-click='delete(eachItem.id)'>X</button>
+        <p><strong>Size:</strong>{{eachItem.size}}</p>
+        <p><strong>Color:</strong>{{eachItem.color}}</p>
       </div>
     </div>
 
