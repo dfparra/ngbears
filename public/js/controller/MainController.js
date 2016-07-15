@@ -19,10 +19,12 @@
 
     function updateBear(bear){
       bear.editing = false;
+      bear.size = bear.size.toString();
+      bear.color = bear.color.toString();
       BearService.update(bear.id,bear)
                   .then(function(){
                     getBears();
-                  })
+                  });
 
     }
 
