@@ -9,7 +9,22 @@
     $scope.bears = BearService.bears;
     $scope.create = createBear;
     $scope.delete = deleteBear;
+    $scope.edit = editBear;
+    $scope.update = updateBear;
     getBears();
+
+    function editBear(bear){
+      bear.editing = true;
+    }
+
+    function updateBear(bear){
+      bear.editing = false;
+      BearService.update(bear.id,bear)
+                  .then(function(){
+                    getBears();
+                  })
+
+    }
 
     function getBears(){
       BearService.readAll()

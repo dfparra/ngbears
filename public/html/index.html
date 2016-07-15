@@ -30,7 +30,7 @@
         <button class="btn btn-sm btn-danger pull-right" ng-click='delete(eachItem.id)'>X</button>
         <p><strong>Size:</strong>
           <!--Hide the Size property when editing-->
-          <h1 ng-hide ='eachItem.editing'>{{eachItem.size}}</h1>
+          <h1 ng-hide='eachItem.editing'>{{eachItem.size}}</h1>
           <!--Show an input box when editing-->
           <div class="form-group" ng-show='eachItem.editing'>
             <input type="text" ng-model='eachItem.size' class='form-control'>
@@ -38,15 +38,15 @@
         </p>
         <p><strong>Color:</strong>
           <!--Hide the Color property when editing-->
-          <h1 ng-hide ='eachItem.editing'>{{eachItem.color}}</h1>
+          <h1 ng-hide='eachItem.editing'>{{eachItem.color}}</h1>
           <!--Show an input box when editing-->
           <div class="form-group" ng-show='eachItem.editing'>
             <input type="text" ng-model='eachItem.color' class='form-control'>
           </div>
         </p>
         <!--Edit/Update button-->
-        <button ng-hide="eachItem.editing" class="btn btn-warning pull-right">Edit</button>
-        <button ng-show='eachItem.editing' class="btn btn-success pull-right">Update</button>
+        <button ng-hide='eachItem.editing' class="btn btn-warning pull-right" ng-cick='edit(eachItem)'>Edit</button>
+        <button ng-show='eachItem.editing' class="btn btn-success pull-right" ng-click='update(eachItem)'>Update</button>
       </div>
     </div>
 
