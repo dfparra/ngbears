@@ -19,8 +19,14 @@
 
     function updateBear(bear){
       bear.editing = false;
-      bear.size = bear.size.toString();
-      bear.color = bear.color.toString();
+      bear.size = bear.size;
+      bear.color = bear.color;
+
+      //Implement these in frontend
+      bear.isAwake = "";
+      bear.hasKids = "";
+      bear.isHungry = "";
+
       BearService.update(bear.id,bear)
                   .then(function(){
                     getBears();
